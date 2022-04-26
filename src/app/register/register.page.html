@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title> Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title color="primary"> Make an Account</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Full name</ion-label>
+        <ion-input [(ngModel)]="name" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">password</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Department</ion-label>
+        <ion-input [(ngModel)]="department" type="text"></ion-input>
+      </ion-item>
+
+      <ion-button type="button" (click)="addUser()" color="primary" size="full">Create</ion-button>
+<br>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list>
+    <ion-list-header>
+      <h1 style="color:#3880ff">List of All User Accounts</h1>
+    </ion-list-header>
+<br><br>
+    <ion-item lines="inset" *ngFor="let user of users">
+      <ion-label>
+        <h3> Name: {{ user.name }}  |  ID Number: {{ user.id}} </h3>
+        <p>Email:- {{ user.email }} </p>
+        <p>Dpt: -  {{ user.department }}</p>
+
+      </ion-label>
+
+      <div class="item-note">
+       <ion-icon name="pencil-outline" style="zoom: 2.0;" [routerLink] = "['/update-user',user.id]"></ion-icon>
+        <ion-icon name="trash-outline" style="zoom: 2.0;" (click)="deleteUser(user.id)"></ion-icon>
+      </div>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

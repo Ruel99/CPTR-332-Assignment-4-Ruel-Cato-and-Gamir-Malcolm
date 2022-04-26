@@ -16,7 +16,7 @@ ion-menu.md ion-list {
 ion-menu.md ion-note {
   margin-bottom: 30px;
 }
-
+inbox-list
 ion-menu.md ion-list-header,
 ion-menu.md ion-note {
   padding-left: 10px;
@@ -116,4 +116,9 @@ ion-note {
 
 ion-item.selected {
   --color: var(--ion-color-primary);
+}
+
+.nav_title{
+  margin-top: 35px;
+  text-align: center;
 }

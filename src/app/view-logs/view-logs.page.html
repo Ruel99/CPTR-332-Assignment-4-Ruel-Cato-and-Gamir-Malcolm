@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title style="color:#3880ff"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <h1 style="color:#3880ff">View Appointments Logs</h1>
+    </ion-list-header>
+<br><br>
+    <ion-item lines="inset" *ngFor="let log of logs">
+      <ion-label>
+        <h3> Log Written by {{ log.staff_name }} - {{ log.employee_ID }} </h3>
+        <p>For Appointment ID: {{ log.appointment_ID }} at: {{ log.time_frame }}</p>
+        <p>Notes:- {{ log.note }}</p>
+
+      </ion-label>
+
+      <div class="item-note">
+        <ion-icon name="pencil-outline" style="zoom: 2.0;" [routerLink] = "['/update-log', log.id]"></ion-icon>
+        <ion-icon name="trash-outline" style="zoom: 2.0;" (click)="deleteLog(log.id)"></ion-icon>
+      </div>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

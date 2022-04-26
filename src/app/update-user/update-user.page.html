@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title color="primary"> Update Account</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Full name</ion-label>
+        <ion-input [(ngModel)]="name" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">password</ion-label>
+        <ion-input [(ngModel)]="password" type="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Department</ion-label>
+        <ion-input [(ngModel)]="department" type="text"></ion-input>
+      </ion-item>
+
+      <ion-button type="button" (click)="updateUser()" color="primary" size="full">Update</ion-button>
+<br>
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

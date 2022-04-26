@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title color="primary"> Update Appointment</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Staff Name</ion-label>
+        <ion-input [(ngModel)]="staff_name" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Employee ID</ion-label>
+        <ion-input [(ngModel)]="employee_ID" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Appointment ID</ion-label>
+        <ion-input [(ngModel)]="appointment_ID" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Note</ion-label>
+        <ion-input [(ngModel)]="note" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Time Frame</ion-label>
+        <ion-input [(ngModel)]="time_frame" type="text"></ion-input>
+      </ion-item>
+
+      <ion-button type="button" (click)="updateLog()" color="primary" size="full">Update</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    
+    <ion-title>Contact us</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      
+      <div>
+        <p>Thank you for using our App! Please fill out the form below and we will get back to you soon!</p>                                                                                                                                                                                                                                                                 
+      </div>
+
+    </ion-card-content>
+    
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+       
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label stacked>Phone</ion-label>
+      <ion-input type="tel"></ion-input>
+    </ion-item>              
+  </ion-card>
+
+  <ion-card>
+    <label class="item item-input">
+      <textarea placeholder="Comments"></textarea>
+    </label>
+  </ion-card>
+
+  <ion-col size-sm="6" size="6" class="ion-text-center">
+    <ion-button color="primary" expand="full" class="ion-text-wrap min-max-width" href="#">Submit</ion-button>
+  </ion-col>
+</ion-content>

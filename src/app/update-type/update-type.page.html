@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title color="primary"> Create Appointment Type</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Appointment Type Name</ion-label>
+        <ion-input [(ngModel)]="name" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Price</ion-label>
+        <ion-input [(ngModel)]="price" type="text"></ion-input>
+      </ion-item>
+
+      <ion-button type="button" (click)="updateType()" color="primary" size="full">Update</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

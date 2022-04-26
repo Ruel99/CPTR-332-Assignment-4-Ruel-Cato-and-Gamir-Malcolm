@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+        <ion-card-title color="primary"> Update Appointment</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input [(ngModel)]="full_name" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input [(ngModel)]="email" type="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Appointment Type</ion-label>
+        <ion-input [(ngModel)]="appointment_type" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Person of interest</ion-label>
+        <ion-input [(ngModel)]="staff_member" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Day</ion-label>
+        <ion-input [(ngModel)]="day" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Date(DD/MM/YYYY)</ion-label>
+        <ion-input [(ngModel)]="appointment_date" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Time</ion-label>
+        <ion-input [(ngModel)]="appointment_time" type="text"></ion-input>
+      </ion-item>
+
+      <ion-button type="button" (click)="updateAppointment()" color="primary" size="full">Update</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
